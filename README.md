@@ -75,4 +75,3 @@ Describe your fixed game in numbered steps so a reader can follow along without 
 ## Test Results
 - 3 passed in 0.02s 
 - command used for test results (cat test_results.txt)
-
