@@ -52,3 +52,27 @@ Describe your fixed game in numbered steps so a reader can follow along without 
 ## 🚀 Stretch Features
 
 - [ ] [If you choose to complete Challenge 4, describe the Enhanced UI changes here — a screenshot is optional]
+
+## Documenting
+
+- The game is a Streamlit number guessing game where the player tries to guess a secret number within a limited number of attempts.
+-  I found several bugs: the hints were backwards, the Streamlit state was unreliable, and some refactored functions in `logic_utils.py` still raised `NotImplementedError`.
+-  I fixed the game by storing the secret number in `st.session_state`, correcting the high/low hint logic, moving core game logic into `logic_utils.py`, and verifying the repairs with pytest and live Streamlit testing.
+
+## 📸 Demo Walkthrough
+
+1. The user runs the app with `python -m streamlit run app.py`.
+2. The Streamlit game opens and displays the guessing interface.
+3. The user opens Developer Debug Info to view the secret number for testing.
+4. The user enters a guess lower than the secret number.
+5. The game correctly tells the user to go higher.
+6. The user enters a guess higher than the secret number.
+7. The game correctly tells the user to go lower.
+8. The user enters the exact secret number.
+9. The game displays a winning message and shows the final score.
+10. The secret number stays the same during the round and only changes when a new game starts.
+
+## Test Results
+- 3 passed in 0.02s 
+- command used for test results (cat test_results.txt)
+
